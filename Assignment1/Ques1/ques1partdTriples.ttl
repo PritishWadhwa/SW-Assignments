@@ -1,0 +1,55 @@
+@prefix EX: <http://iiitd.ac.in/course/sweb/student/2019440/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+EX:2_Wheeler EX:subClassOf EX:Vehicle .
+
+EX:3_Wheeler EX:subClassOf EX:Vehicle .
+
+EX:Cars EX:subClassOf EX:4_Wheeler .
+
+EX:Land_Cruiser EX:alternateName "Toyota Rando-Kurūzā"@Hepburn,
+        "Toyota Land Cruiser"@en ;
+    EX:alternateSpelling "Land Cruiser"@en,
+        "LandCruiser"@en ;
+    EX:bodyStyleProduced "Cab Chassis"@en,
+        "Convertible"@en,
+        "Hardtop"@en,
+        "Station Wagon"@en ;
+    EX:parentCompany EX:Toyota ;
+    EX:productionOf [ EX:modelName "First Generation Land Cruiser"@en ;
+            EX:startYear "1951-01-01"^^xsd:gYear ] ;
+    EX:sales [ EX:tillYear "2019-01-01"^^xsd:gYear ;
+            EX:unitsSold 10000000 ;
+            EX:whereSold "Worldwide"^^xsd:string ] ;
+    EX:typeOf EX:SUV .
+
+EX:Toyota EX:countryOfOrigin "Japan"^^xsd:string ;
+    EX:currentFocusOn [ EX:productionOf EX:Electric_Vehicle ;
+            EX:reason "Very Low Impact on Environment"@en ],
+        "Sustainable Growth"@en ;
+    EX:domain "Automobile Manufacturer"@en ;
+    EX:fullName "Toyota Motor Corporation"^^xsd:string ;
+    EX:headquarters [ EX:city "Tokyo City"@en ;
+            EX:country "Japan"@en ;
+            EX:prefecture "Aichi"@en ] ;
+    EX:historicalInformation [ EX:foundedBy [ EX:firstName "Kiichiro"@jp ;
+                    EX:lastName "Toyoda"@jp ] ;
+            EX:incorporationDate "1937-08-28"^^xsd:date ] ;
+    EX:longestRunningSeriesOfModels EX:Land_Cruiser ;
+    EX:majorCompetitor "Ford"@en,
+        "Hyundai"@en,
+        "Volkswagon"@en ;
+    EX:manufactures EX:Cars,
+        EX:Electric_Vehicle,
+        EX:SUV ;
+    EX:market ( "North America"@en "Japan"@en "Asia"@en ) .
+
+EX:Electric_Vehicle EX:subClassOf EX:2_Wheeler,
+        EX:3_Wheeler,
+        EX:4_Wheeler .
+
+EX:SUV EX:subClassOf EX:4_Wheeler .
+
+EX:4_Wheeler EX:subClassOf EX:Vehicle .
+

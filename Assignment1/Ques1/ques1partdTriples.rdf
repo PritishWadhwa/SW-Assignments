@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+   xmlns:EX="http://iiitd.ac.in/course/sweb/student/2019440/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+>
+  <rdf:Description rdf:about="http://iiitd.ac.in/course/sweb/student/2019440/Toyota">
+    <EX:manufactures rdf:resource="http://iiitd.ac.in/course/sweb/student/2019440/SUV"/>
+    <EX:manufactures rdf:resource="http://iiitd.ac.in/course/sweb/student/2019440/Electric_Vehicle"/>
+    <EX:headquarters rdf:nodeID="ub1bL38C21"/>
+    <EX:countryOfOrigin rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Japan</EX:countryOfOrigin>
+    <EX:fullName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Toyota Motor Corporation</EX:fullName>
+    <EX:historicalInformation rdf:nodeID="ub1bL41C30"/>
+    <EX:currentFocusOn rdf:nodeID="ub1bL32C23"/>
+    <EX:longestRunningSeriesOfModels rdf:resource="http://iiitd.ac.in/course/sweb/student/2019440/Land_Cruiser"/>
+    <EX:majorCompetitor xml:lang="en">Ford</EX:majorCompetitor>
+    <EX:manufactures rdf:resource="http://iiitd.ac.in/course/sweb/student/2019440/Cars"/>
+    <EX:currentFocusOn xml:lang="en">Sustainable Growth</EX:currentFocusOn>
+    <EX:majorCompetitor xml:lang="en">Hyundai</EX:majorCompetitor>
+    <EX:domain xml:lang="en">Automobile Manufacturer</EX:domain>
+    <EX:majorCompetitor xml:lang="en">Volkswagon</EX:majorCompetitor>
+    <EX:market rdf:nodeID="f50d60460ecdb478fa07a111eb1ef4b4cb1"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="ub1bL38C21">
+    <EX:country xml:lang="en">Japan</EX:country>
+    <EX:city xml:lang="en">Tokyo City</EX:city>
+    <EX:prefecture xml:lang="en">Aichi</EX:prefecture>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iiitd.ac.in/course/sweb/student/2019440/Land_Cruiser">
+    <EX:alternateSpelling xml:lang="en">LandCruiser</EX:alternateSpelling>
+    <EX:bodyStyleProduced xml:lang="en">Hardtop</EX:bodyStyleProduced>
+    <EX:parentCompany rdf:resource="http://iiitd.ac.in/course/sweb/student/2019440/Toyota"/>
+    <EX:alternateSpelling xml:lang="en">Land Cruiser</EX:alternateSpelling>
+    <EX:productionOf rdf:nodeID="ub1bL24C21"/>
+    <EX:typeOf rdf:resource="http://iiitd.ac.in/course/sweb/student/2019440/SUV"/>
+    <EX:bodyStyleProduced xml:lang="en">Convertible</EX:bodyStyleProduced>
+    <EX:bodyStyleProduced xml:lang="en">Cab Chassis</EX:bodyStyleProduced>
+    <EX:alternateName xml:lang="Hepburn">Toyota Rando-Kurūzā</EX:alternateName>
+    <EX:bodyStyleProduced xml:lang="en">Station Wagon</EX:bodyStyleProduced>
+    <EX:alternateName xml:lang="en">Toyota Land Cruiser</EX:alternateName>
+    <EX:sales rdf:nodeID="ub1bL26C14"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="f50d60460ecdb478fa07a111eb1ef4b4cb2">
+    <rdf:first xml:lang="en">Japan</rdf:first>
+    <rdf:rest rdf:nodeID="f50d60460ecdb478fa07a111eb1ef4b4cb3"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="ub1bL24C21">
+    <EX:modelName xml:lang="en">First Generation Land Cruiser</EX:modelName>
+    <EX:startYear rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">1951-01-01</EX:startYear>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="ub1bL41C45">
+    <EX:lastName xml:lang="jp">Toyoda</EX:lastName>
+    <EX:firstName xml:lang="jp">Kiichiro</EX:firstName>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="ub1bL41C30">
+    <EX:incorporationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1937-08-28</EX:incorporationDate>
+    <EX:foundedBy rdf:nodeID="ub1bL41C45"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="ub1bL26C14">
+    <EX:tillYear rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">2019-01-01</EX:tillYear>
+    <EX:unitsSold rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10000000</EX:unitsSold>
+    <EX:whereSold rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Worldwide</EX:whereSold>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iiitd.ac.in/course/sweb/student/2019440/Electric_Vehicle">
+    <EX:subClassOf rdf:resource="http://iiitd.ac.in/course/sweb/student/2019440/2_Wheeler"/>
+    <EX:subClassOf rdf:resource="http://iiitd.ac.in/course/sweb/student/2019440/4_Wheeler"/>
+    <EX:subClassOf rdf:resource="http://iiitd.ac.in/course/sweb/student/2019440/3_Wheeler"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iiitd.ac.in/course/sweb/student/2019440/2_Wheeler">
+    <EX:subClassOf rdf:resource="http://iiitd.ac.in/course/sweb/student/2019440/Vehicle"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="f50d60460ecdb478fa07a111eb1ef4b4cb3">
+    <rdf:first xml:lang="en">Asia</rdf:first>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="ub1bL32C23">
+    <EX:reason xml:lang="en">Very Low Impact on Environment</EX:reason>
+    <EX:productionOf rdf:resource="http://iiitd.ac.in/course/sweb/student/2019440/Electric_Vehicle"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="f50d60460ecdb478fa07a111eb1ef4b4cb1">
+    <rdf:first xml:lang="en">North America</rdf:first>
+    <rdf:rest rdf:nodeID="f50d60460ecdb478fa07a111eb1ef4b4cb2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iiitd.ac.in/course/sweb/student/2019440/3_Wheeler">
+    <EX:subClassOf rdf:resource="http://iiitd.ac.in/course/sweb/student/2019440/Vehicle"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iiitd.ac.in/course/sweb/student/2019440/4_Wheeler">
+    <EX:subClassOf rdf:resource="http://iiitd.ac.in/course/sweb/student/2019440/Vehicle"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iiitd.ac.in/course/sweb/student/2019440/Cars">
+    <EX:subClassOf rdf:resource="http://iiitd.ac.in/course/sweb/student/2019440/4_Wheeler"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iiitd.ac.in/course/sweb/student/2019440/SUV">
+    <EX:subClassOf rdf:resource="http://iiitd.ac.in/course/sweb/student/2019440/4_Wheeler"/>
+  </rdf:Description>
+</rdf:RDF>
