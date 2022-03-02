@@ -1,0 +1,32 @@
+@prefix ns1: <http://iiitd.ac.in/course/sweb/student/2019408/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ns1:InterviewCharlie {
+    ns1:isAmong_1 ns1:hasSource ns1:CharlieMunger ;
+        ns1:singletonPropertyOf ns1:isAmong .
+
+    ns1:question ns1:askedTo [ ns1:about ns1:ElonMusk ;
+                ns1:at ns1:DailyJournalMeeting ;
+                ns1:respondant ns1:CharlieMunger ;
+                ns1:year "2014-01-01"^^xsd:date ] .
+
+    ns1:belief a rdf:Statement ;
+        rdf:object ns1:SpaceX,
+            ns1:Tesla ;
+        rdf:predicate ns1:behind ;
+        rdf:subject ns1:mind .
+
+    ns1:opinion a rdf:Statement ;
+        rdf:object ns1:belief,
+            ns1:billionaire,
+            ns1:genius,
+            ns1:thought ;
+        rdf:predicate rdf:type ;
+        rdf:subject ns1:ElonMusk .
+
+    ns1:CharlieMunger ns1:replied ns1:opinion .
+
+    ns1:ElonMusk ns1:isAmong_1 ns1:boldest,
+            ns1:smartest .
+}

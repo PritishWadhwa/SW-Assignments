@@ -9,13 +9,16 @@ EX:Vehicle a rdfs:Class .
 EX:Vehicle_Brands a rdfs:Class .
 
 EX:alternateName rdfs:domain EX:Vehicle ;
-    rdfs:range foaf:name .
+    rdfs:range foaf:name ;
+    rdfs:subPropertyOf EX:alternates .
 
 EX:alternateSpelling rdfs:domain EX:Vehicle ;
-    rdfs:range foaf:name .
+    rdfs:range foaf:name ;
+    rdfs:subPropertyOf EX:alternates .
 
 EX:bodyStyleProduced rdfs:domain EX:Vehicle ;
-    rdfs:range EX:Car_Body_Style .
+    rdfs:range EX:Car_Body_Style ;
+    rdfs:subPropertyOf EX:production .
 
 EX:business rdfs:domain EX:Company ;
     rdfs:range EX:Business .
@@ -30,7 +33,8 @@ EX:countryOfOrigin rdfs:domain EX:Company ;
     rdfs:range EX:Place .
 
 EX:currentFocusOn rdfs:domain EX:Company ;
-    rdfs:range EX:Goal .
+    rdfs:range EX:Goal ;
+    rdfs:subPropertyOf EX:focusOn .
 
 EX:firstName rdfs:domain foaf:Person ;
     rdfs:range foaf:firstName .
@@ -45,7 +49,8 @@ EX:headquarters rdfs:domain EX:Company ;
     rdfs:range EX:Place .
 
 EX:historicalInformation rdfs:domain EX:Company ;
-    rdfs:range EX:Information .
+    rdfs:range EX:Information ;
+    rdfs:subPropertyOf EX:information .
 
 EX:incorporationDate rdfs:domain EX:Company ;
     rdfs:range xsd:date .
@@ -54,10 +59,12 @@ EX:lastName rdfs:domain foaf:Person ;
     rdfs:range foaf:lastName .
 
 EX:longestRunningSeriesOfModels rdfs:domain EX:Company ;
-    rdfs:range EX:Vehicle .
+    rdfs:range EX:Vehicle ;
+    rdfs:subPropertyOf EX:seriesOfModels .
 
 EX:majorCompetitors rdfs:domain EX:Company ;
-    rdfs:range EX:Company .
+    rdfs:range EX:Company ;
+    rdfs:subPropertyOf EX:competitors .
 
 EX:manufactures rdfs:domain EX:Company ;
     rdfs:range EX:Vehicle .
