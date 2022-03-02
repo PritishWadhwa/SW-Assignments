@@ -1,55 +1,74 @@
 @prefix EX: <http://iiitd.ac.in/course/sweb/student/2019440/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-EX:2_Wheeler EX:subClassOf EX:Vehicle .
+EX:Vehicle a rdfs:Class .
 
-EX:3_Wheeler EX:subClassOf EX:Vehicle .
+EX:Vehicle_Brands a rdfs:Class .
 
-EX:Cars EX:subClassOf EX:4_Wheeler .
+EX:2_Wheeler rdfs:subClassOf EX:Vehicle .
 
-EX:Land_Cruiser EX:alternateName "Toyota Rando-Kurūzā"@Hepburn,
+EX:3_Wheeler rdfs:subClassOf EX:Vehicle .
+
+EX:Ford EX:manufactures EX:Cars ;
+    rdfs:subClassOf EX:Vehicle_Brands .
+
+EX:Hyundai EX:manufactures EX:Cars ;
+    rdfs:subClassOf EX:Vehicle_Brands .
+
+EX:Land_Cruiser a EX:SUV ;
+    EX:alternateName "Toyota Rando-Kurūzā"@Hepburn,
         "Toyota Land Cruiser"@en ;
     EX:alternateSpelling "Land Cruiser"@en,
         "LandCruiser"@en ;
-    EX:bodyStyleProduced "Cab Chassis"@en,
-        "Convertible"@en,
-        "Hardtop"@en,
-        "Station Wagon"@en ;
+    EX:bodyStyleProduced [ a rdf:Bag ;
+            rdf:_1 "Hardtop"@en ;
+            rdf:_2 "Station Wagon"@en ;
+            rdf:_3 "Cab Chassis"@en ;
+            rdf:_4 "Convertible"@en ] ;
     EX:parentCompany EX:Toyota ;
     EX:productionOf [ EX:modelName "First Generation Land Cruiser"@en ;
             EX:startYear "1951"^^xsd:gYear ] ;
     EX:sales [ EX:tillYear "2019"^^xsd:gYear ;
             EX:unitsSold 10000000 ;
-            EX:whereSold "Worldwide"^^xsd:string ] ;
-    EX:typeOf EX:SUV .
+            EX:whereSold "Worldwide"^^xsd:string ] .
 
-EX:Toyota EX:countryOfOrigin "Japan"^^xsd:string ;
+EX:Toyota EX:countryOfOrigin EX:Japan ;
     EX:currentFocusOn [ EX:productionOf EX:Electric_Vehicle ;
-            EX:reason "Very Low Impact on Environment"@en ],
+            EX:reason [ EX:impactOn "Environment"@en ;
+                    EX:intensity "Very Low"@en ] ],
         "Sustainable Growth"@en ;
     EX:domain "Automobile Manufacturer"@en ;
     EX:fullName "Toyota Motor Corporation"^^xsd:string ;
-    EX:headquarters [ EX:city "Tokyo City"@en ;
-            EX:country "Japan"@en ;
-            EX:prefecture "Aichi"@en ] ;
+    EX:headquarters [ EX:city EX:Tokyo_City ;
+            EX:country EX:Japan ;
+            EX:prefecture EX:Aichi ] ;
     EX:historicalInformation [ EX:foundedBy [ EX:firstName "Kiichiro"@jp ;
                     EX:lastName "Toyoda"@jp ] ;
             EX:incorporationDate "1937-08-28"^^xsd:date ] ;
     EX:longestRunningSeriesOfModels EX:Land_Cruiser ;
-    EX:majorCompetitor "Ford"@en,
-        "Hyundai"@en,
-        "Volkswagon"@en ;
-    EX:manufactures EX:Cars,
-        EX:Electric_Vehicle,
-        EX:SUV ;
-    EX:market ( "North America"@en "Japan"@en "Asia"@en ) .
+    EX:majorCompetitors [ a rdf:Bag ;
+            rdf:_1 EX:Ford ;
+            rdf:_2 EX:Hyundai ;
+            rdf:_3 EX:Volkswagon ] ;
+    EX:manufactures [ a rdf:Bag ;
+            rdf:_1 EX:SUV ;
+            rdf:_2 EX:Cars ;
+            rdf:_3 EX:Electric_Vehicle ] ;
+    EX:market ( EX:North_America EX:Japan EX:Asia ) ;
+    rdfs:subClassOf EX:Vehicle_Brands .
 
-EX:Electric_Vehicle EX:subClassOf EX:2_Wheeler,
+EX:Volkswagon EX:manufactures EX:Cars ;
+    rdfs:subClassOf EX:Vehicle_Brands .
+
+EX:Electric_Vehicle rdfs:subClassOf EX:2_Wheeler,
         EX:3_Wheeler,
         EX:4_Wheeler .
 
-EX:SUV EX:subClassOf EX:4_Wheeler .
+EX:SUV rdfs:subClassOf EX:4_Wheeler .
 
-EX:4_Wheeler EX:subClassOf EX:Vehicle .
+EX:4_Wheeler rdfs:subClassOf EX:Vehicle .
+
+EX:Cars rdfs:subClassOf EX:4_Wheeler .
 

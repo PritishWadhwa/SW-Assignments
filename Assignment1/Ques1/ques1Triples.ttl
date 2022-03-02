@@ -12,10 +12,11 @@ EX:Land_Cruiser EX:alternateName "Toyota Rando-Kurūzā"@Hepburn,
         "Toyota Land Cruiser"@en ;
     EX:alternateSpelling "Land Cruiser"@en,
         "LandCruiser"@en ;
-    EX:bodyStyleProduced "Cab Chassis"@en,
-        "Convertible"@en,
-        "Hardtop"@en,
-        "Station Wagon"@en ;
+    EX:bodyStyleProduced [ a rdf:Bag ;
+            rdf:_1 "Hardtop"@en ;
+            rdf:_2 "Station Wagon"@en ;
+            rdf:_3 "Cab Chassis"@en ;
+            rdf:_4 "Convertible"@en ] ;
     EX:parentCompany EX:Toyota ;
     EX:productionOf [ EX:modelName "First Generation Land Cruiser"@en ;
             EX:startYear "1951"^^xsd:gYear ] ;
@@ -24,15 +25,15 @@ EX:Land_Cruiser EX:alternateName "Toyota Rando-Kurūzā"@Hepburn,
             EX:whereSold "Worldwide"^^xsd:string ] ;
     EX:typeOf EX:SUV .
 
-EX:Toyota EX:countryOfOrigin "Japan"^^xsd:string ;
+EX:Toyota EX:countryOfOrigin EX:Japan ;
     EX:currentFocusOn [ EX:productionOf EX:Electric_Vehicle ;
             EX:reason "Very Low Impact on Environment"@en ],
         "Sustainable Growth"@en ;
     EX:domain "Automobile Manufacturer"@en ;
     EX:fullName "Toyota Motor Corporation"^^xsd:string ;
-    EX:headquarters [ EX:city "Tokyo City"@en ;
-            EX:country "Japan"@en ;
-            EX:prefecture "Aichi"@en ] ;
+    EX:headquarters [ EX:city EX:Tokyo_City ;
+            EX:country EX:Japan ;
+            EX:prefecture EX:Aichi ] ;
     EX:historicalInformation [ EX:foundedBy [ EX:firstName "Kiichiro"@jp ;
                     EX:lastName "Toyoda"@jp ] ;
             EX:incorporationDate "1937-08-28"^^xsd:date ] ;
@@ -43,7 +44,7 @@ EX:Toyota EX:countryOfOrigin "Japan"^^xsd:string ;
     EX:manufactures EX:Cars,
         EX:Electric_Vehicle,
         EX:SUV ;
-    EX:market ( "North America"@en "Japan"@en "Asia"@en ) .
+    EX:market ( EX:North_America EX:Japan EX:Asia ) .
 
 EX:Electric_Vehicle EX:subClassOf EX:2_Wheeler,
         EX:3_Wheeler,
