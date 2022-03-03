@@ -42,7 +42,8 @@ public class HelloRDF4J {
 		InputStream input = HelloRDF4J.class.getResourceAsStream("./" + fileName);
 //		System.out.println(input);
 		Model model = Rio.parse(input, "", RDFFormat.TRIG);
-		Model convertedModel = Models.convertReificationToRDFStar(model); 
+//		Model convertedModel = Models.convertReificationToRDFStar(model); 
+		Model convertedModel = Models.convertRDFStarToReification(model);
 		Rio.write(convertedModel, System.out, RDFFormat.TURTLESTAR);
 //		model.forEach(System.out::println);
 //		System.out.println("Working Directory = " + System.getProperty("user.dir"));
