@@ -1,0 +1,46 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix EX: <http://iiitd.ac.in/course/sweb/student/2019440/> .
+
+EX:ElonMusk a "Billionaire"@en;
+  EX:interview _:node1ft7v7chdx8;
+  EX:brilliantMindBehind _:node1ft7v7chdx1;
+  foaf:firstName "Elon"@en;
+  foaf:lastName "Musk"@en .
+
+_:node1ft7v7chdx1 a rdf:Bag;
+  rdfs:member EX:SpaceX, EX:Tesla .
+
+EX:Question EX:asked _:node1ft7v7chdx2 .
+
+_:node1ft7v7chdx2 EX:askedTo EX:CharlieMunger;
+  EX:askedAbout EX:ElonMusk;
+  EX:askedAt _:node1ft7v7chdx3;
+  EX:name "Daily Journal Meeting"@en .
+
+_:node1ft7v7chdx3 EX:year "2014"^^<http://www.w3.org/2001/XMLSchema#gYear> .
+
+EX:CharlieMunger foaf:firstName "Charlie"@en;
+  foaf:lastName "Munger"@en .
+
+_:node1ft7v7chdx8 EX:interviewWith "Design and Architecture"@en .
+
+EX:IsaacAsimov foaf:firstName "Isaac"@en;
+  foaf:lastName "Asimov"@en .
+
+EX:Isaacson foaf:lastName "Isaacson"@en .
+
+<<EX:ElonMusk rdf:type "Genius"@en>> EX:thinks EX:CharlieMunger .
+
+<<EX:ElonMusk EX:oneOfThe "Boldest"@en>> EX:thinks EX:CharlieMunger .
+
+<<EX:ElonMusk EX:oneOfThe "Smartest"@en>> EX:thinks EX:CharlieMunger .
+
+<<EX:IsaacAsimov EX:author "Great"@en>> EX:said EX:ElonMusk .
+
+<<EX:IsaacAsimov EX:author "Sci-fi book"@en>> EX:said EX:ElonMusk .
+
+<<EX:FoundationSeries EX:among "All-time best"@en>> EX:likes EX:ElonMusk .
+
+<<EX:EinsteinHisLifeandUniverse EX:EwrittenBy EX:Isaacson>> EX:recommends EX:ElonMusk .

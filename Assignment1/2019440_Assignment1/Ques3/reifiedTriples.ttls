@@ -1,0 +1,54 @@
+
+<http://iiitd.ac.in/course/sweb/student/2019440/ElonMusk> a "Billionaire"@en;
+  <http://iiitd.ac.in/course/sweb/student/2019440/interview> _:node1ft8eu992x4;
+  <http://iiitd.ac.in/course/sweb/student/2019440/brilliantMindBehind> _:node1ft8eu992x1;
+  <http://xmlns.com/foaf/0.1/firstName> "Elon"@en;
+  <http://xmlns.com/foaf/0.1/lastName> "Musk"@en .
+
+_:node1ft8eu992x1 a <http://www.w3.org/1999/02/22-rdf-syntax-ns#Bag>;
+  <http://www.w3.org/2000/01/rdf-schema#member> <http://iiitd.ac.in/course/sweb/student/2019440/SpaceX>,
+    <http://iiitd.ac.in/course/sweb/student/2019440/Tesla> .
+
+<http://iiitd.ac.in/course/sweb/student/2019440/Question> <http://iiitd.ac.in/course/sweb/student/2019440/asked>
+    _:node1ft8eu992x2 .
+
+_:node1ft8eu992x2 <http://iiitd.ac.in/course/sweb/student/2019440/askedTo> <http://iiitd.ac.in/course/sweb/student/2019440/CharlieMunger>;
+  <http://iiitd.ac.in/course/sweb/student/2019440/askedAbout> <http://iiitd.ac.in/course/sweb/student/2019440/ElonMusk>;
+  <http://iiitd.ac.in/course/sweb/student/2019440/askedAt> _:node1ft8eu992x3;
+  <http://iiitd.ac.in/course/sweb/student/2019440/name> "Daily Journal Meeting"@en .
+
+_:node1ft8eu992x3 <http://iiitd.ac.in/course/sweb/student/2019440/year> "2014"^^<http://www.w3.org/2001/XMLSchema#gYear> .
+
+<http://iiitd.ac.in/course/sweb/student/2019440/CharlieMunger> <http://xmlns.com/foaf/0.1/firstName>
+    "Charlie"@en;
+  <http://xmlns.com/foaf/0.1/lastName> "Munger"@en .
+
+_:node1ft8eu992x4 <http://iiitd.ac.in/course/sweb/student/2019440/interviewWith> "Design and Architecture"@en .
+
+<http://iiitd.ac.in/course/sweb/student/2019440/IsaacAsimov> <http://xmlns.com/foaf/0.1/firstName>
+    "Isaac"@en;
+  <http://xmlns.com/foaf/0.1/lastName> "Asimov"@en .
+
+<http://iiitd.ac.in/course/sweb/student/2019440/Isaacson> <http://xmlns.com/foaf/0.1/lastName>
+    "Isaacson"@en .
+
+<<<http://iiitd.ac.in/course/sweb/student/2019440/ElonMusk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> "Genius"@en>>
+  <http://iiitd.ac.in/course/sweb/student/2019440/thinks> <http://iiitd.ac.in/course/sweb/student/2019440/CharlieMunger> .
+
+<<<http://iiitd.ac.in/course/sweb/student/2019440/ElonMusk> <http://iiitd.ac.in/course/sweb/student/2019440/oneOfThe> "Boldest"@en>>
+  <http://iiitd.ac.in/course/sweb/student/2019440/thinks> <http://iiitd.ac.in/course/sweb/student/2019440/CharlieMunger> .
+
+<<<http://iiitd.ac.in/course/sweb/student/2019440/ElonMusk> <http://iiitd.ac.in/course/sweb/student/2019440/oneOfThe> "Smartest"@en>>
+  <http://iiitd.ac.in/course/sweb/student/2019440/thinks> <http://iiitd.ac.in/course/sweb/student/2019440/CharlieMunger> .
+
+<<<http://iiitd.ac.in/course/sweb/student/2019440/IsaacAsimov> <http://iiitd.ac.in/course/sweb/student/2019440/author> "Great"@en>>
+  <http://iiitd.ac.in/course/sweb/student/2019440/said> <http://iiitd.ac.in/course/sweb/student/2019440/ElonMusk> .
+
+<<<http://iiitd.ac.in/course/sweb/student/2019440/IsaacAsimov> <http://iiitd.ac.in/course/sweb/student/2019440/author> "Sci-fi book"@en>>
+  <http://iiitd.ac.in/course/sweb/student/2019440/said> <http://iiitd.ac.in/course/sweb/student/2019440/ElonMusk> .
+
+<<<http://iiitd.ac.in/course/sweb/student/2019440/FoundationSeries> <http://iiitd.ac.in/course/sweb/student/2019440/among> "All-time best"@en>>
+  <http://iiitd.ac.in/course/sweb/student/2019440/likes> <http://iiitd.ac.in/course/sweb/student/2019440/ElonMusk> .
+
+<<<http://iiitd.ac.in/course/sweb/student/2019440/EinsteinHisLifeandUniverse> <http://iiitd.ac.in/course/sweb/student/2019440/EwrittenBy> <http://iiitd.ac.in/course/sweb/student/2019440/Isaacson>>>
+  <http://iiitd.ac.in/course/sweb/student/2019440/recommends> <http://iiitd.ac.in/course/sweb/student/2019440/ElonMusk> .
